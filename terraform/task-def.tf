@@ -19,6 +19,12 @@ resource "aws_ecs_task_definition" "node_app" {
           hostPort      = 3000
         }
       ]
+      secrets = [
+        {
+          name  = "SECRET_WORD"
+          value = "secret_word"
+        }
+      ]
     }
   ])
 }
