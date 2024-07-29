@@ -9,7 +9,7 @@ resource "aws_ecs_task_definition" "node_app" {
   container_definitions = jsonencode([
     {
       name      = "node-container"
-      image     = "node:10"
+      image     = "406424876084.dkr.ecr.us-east-1.amazonaws.com/node-app:latest"
       cpu       = 256
       memory    = 512
       essential = true
